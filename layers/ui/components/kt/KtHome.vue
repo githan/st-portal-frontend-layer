@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import KoHomeCampaign from '../ko/home/KoHomeCampaign.vue';
-</script>
-
 <template>
   <div class="KtHome">
     <div class="visual-container">
@@ -38,13 +34,13 @@ import KoHomeCampaign from '../ko/home/KoHomeCampaign.vue';
       </KoContainer>
     </section>
     <section class="sns-container">
-      <KoContainer width="wide">
-        <KoHomeSns />
-      </KoContainer>
+      <KoHomeSns />
     </section>
   </div>
 </template>
-
+<script setup lang="ts">
+const { isSpLayout } = useDetectSpLayout();
+</script>
 <style scoped lang="scss">
 /** @mixin section-padding: セクションの上下余白を指定 */
 @mixin section-padding {
